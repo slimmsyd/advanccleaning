@@ -252,7 +252,7 @@ export default function Home() {
   return (
     <div className="font-sans text-[#18221c]">
       {/* Hero */}
-      <section className="relative isolate min-h-screen overflow-hidden bg-[#07150f] text-white">
+      <section id="hero" className="relative isolate min-h-screen overflow-hidden bg-[#07150f] text-white">
         <Image
           src="/images/luxury-clean-home-hero.jpg"
           alt="Sunlit luxury living room with spotless floors and bright windows"
@@ -270,11 +270,11 @@ export default function Home() {
               <span className="h-px w-10 bg-white/55" />
               24/7 emergency restoration
             </div>
-            <h1 className="max-w-3xl text-6xl font-semibold leading-[0.9] tracking-[-0.04em] text-white md:text-8xl">
-              Precise cleaning for homes that can&apos;t wait.
+            <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white md:text-7xl">
+              Water Damage Restoration &amp; Cleaning Experts — Aiken • Augusta • Columbia
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-white/82 md:text-2xl md:leading-9">
-              Water damage restoration, mold remediation, carpet, upholstery, and air duct cleaning for Aiken, Augusta, Columbia, and the CSRA.
+              Carpet Cleaning, Air Duct Cleaning, Upholstery Cleaning, Water &amp; Restoration in Aiken, Augusta &amp; Columbia.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -496,7 +496,7 @@ export default function Home() {
           <div className="text-center mb-11">
             <p className="text-[11px] font-semibold tracking-[3.5px] uppercase text-[#017C40]">TESTIMONIALS</p>
             <h2 className="mt-1 text-[56px] md:text-[68px] font-semibold tracking-[-2.2px] leading-none">
-              Real User Feedback
+              Real Feeback
             </h2>
             <p className="mt-4 max-w-[560px] mx-auto text-[15px] leading-relaxed text-[#555]">
               See what homeowners and businesses across Aiken, Augusta, Columbia, and the CSRA are saying about our water damage restoration, carpet cleaning, upholstery, and air duct services.
