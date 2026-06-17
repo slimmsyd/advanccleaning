@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ContactEstimateForm from '../components/ContactEstimateForm';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 const services = [
@@ -598,23 +599,21 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-[#07150f] px-6 py-20 text-white md:py-24">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div>
+      <section id="contact" className="bg-[#07150f] px-6 py-20 text-white md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="max-w-2xl">
             <div className="text-xs font-semibold uppercase tracking-[0.24em] text-white/58">Ready when you are</div>
             <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.035em] md:text-6xl">
               Book a cleaner, calmer next step.
             </h2>
-            <p className="mt-5 text-lg text-white/72">24/7 emergency response across the CSRA.</p>
-          </div>
-          <div className="flex shrink-0 flex-col gap-4 sm:flex-row md:flex-col">
-            <a href="tel:8032334408" className="inline-flex h-14 items-center justify-center rounded-full bg-white px-8 text-base font-semibold text-[#017C40] transition hover:bg-white/90">
+            <p className="mt-5 text-lg leading-8 text-white/72">
+              Tell us what you need cleaned or restored. For active leaks, flooding, or urgent damage, call for 24/7 emergency response across the CSRA.
+            </p>
+            <a href="tel:8032334408" className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-white px-8 text-base font-semibold text-[#017C40] transition hover:bg-white/90">
               Call (803) 233-4408
             </a>
-            <Link href="/contact-us" className="inline-flex h-14 items-center justify-center rounded-full border border-white/35 px-8 text-base font-semibold text-white transition hover:bg-white/10">
-              Get a Free Estimate
-            </Link>
           </div>
+          <ContactEstimateForm />
         </div>
       </section>
     </div>
