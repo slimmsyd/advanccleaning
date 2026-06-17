@@ -248,9 +248,55 @@ const customerStories = [
   },
 ];
 
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Advanced Cleaning Tech',
+  url: 'https://advancedcleaningandrestorationtechs.com/',
+  telephone: '+18032334408',
+  image: 'https://advancedcleaningandrestorationtechs.com/images/luxury-clean-home-hero.jpg',
+  priceRange: '$$',
+  description:
+    'Water damage restoration, carpet cleaning, air duct cleaning, upholstery cleaning, mold remediation, and odor removal for Aiken, Augusta, Columbia, and the CSRA.',
+  areaServed: [
+    { '@type': 'City', name: 'Aiken', addressRegion: 'SC' },
+    { '@type': 'City', name: 'Augusta', addressRegion: 'GA' },
+    { '@type': 'City', name: 'Columbia', addressRegion: 'SC' },
+    { '@type': 'Place', name: 'CSRA' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      opens: '00:00',
+      closes: '23:59',
+    },
+  ],
+  makesOffer: services.map((service) => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: service.title,
+      description: service.desc,
+    },
+  })),
+};
+
 export default function Home() {
   return (
     <div className="font-sans text-[#18221c]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       {/* Hero */}
       <section id="hero" className="relative isolate min-h-screen overflow-hidden bg-[#07150f] text-white">
         <Image
